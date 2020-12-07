@@ -1,6 +1,10 @@
 # UUID Argument Resolver Bundle
 ramsey/uuid argument resolver bundle for Symfony
 
+[![Coverage Status](https://coveralls.io/repos/github/AlexLisenkov/uuid-argument-resolver/badge.svg?branch=main)](https://coveralls.io/github/AlexLisenkov/uuid-argument-resolver?branch=main)
+![CI](https://github.com/AlexLisenkov/uuid-argument-resolver/workflows/CI/badge.svg)
+![Packagist Downloads](https://img.shields.io/packagist/dt/alexlisenkov/uuid-argument-resolver-bundle)
+![PHP Versions](https://img.shields.io/badge/PHP-%5E7.3%20%7C%7C%20%5E8.0-blue)
 
 ## Install
 ```shell
