@@ -2,8 +2,6 @@ services:
   _defaults:
     autowire: true
 
-
-
   alexlisenkov.uuid_argument_resolver_bundle.uuid_invalid_response:
     class: '@Psr\Http\Message\ResponseInterface'
     factory: [ 'AlexLisenkov\UuidArgumentResolverBundle\InvalidUuidResponseFactory', create ]
