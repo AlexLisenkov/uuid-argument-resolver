@@ -6,7 +6,7 @@ use Generator;
 use Psr\Http\Message\ResponseInterface;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
-use Symfony\Bridge\PsrHttpMessage\HttpFoundationFactoryInterface;
+use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
@@ -14,7 +14,7 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 class Resolver implements ArgumentValueResolverInterface
 {
     /**
-     * @var HttpFoundationFactoryInterface
+     * @var HttpFoundationFactory
      */
     private $httpFoundationFactory;
     /**
@@ -22,7 +22,7 @@ class Resolver implements ArgumentValueResolverInterface
      */
     private $invalidUuidResponse;
 
-    public function __construct(HttpFoundationFactoryInterface $httpFoundationFactory, ResponseInterface $invalidUuidResponse)
+    public function __construct(HttpFoundationFactory $httpFoundationFactory, ResponseInterface $invalidUuidResponse)
     {
         $this->httpFoundationFactory = $httpFoundationFactory;
         $this->invalidUuidResponse = $invalidUuidResponse;
