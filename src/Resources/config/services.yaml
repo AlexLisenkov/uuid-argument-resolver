@@ -1,8 +1,7 @@
 services:
   _defaults:
     autowire: true
-
-  Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory: ~
+    autoconfigure: true
 
   alexlisenkov.uuid_argument_resolver_bundle.uuid_invalid_response:
     class: '@Psr\Http\Message\ResponseInterface'
@@ -12,4 +11,5 @@ services:
     tags:
       - { name: controller.argument_value_resolver, priority: 150 }
     arguments:
+      $httpFoundationFactory: 'Symfony\Bridge\PsrHttpMessage\HttpFoundationFactory'
       $invalidUuidResponse: '@alexlisenkov.uuid_argument_resolver_bundle.uuid_invalid_response'
