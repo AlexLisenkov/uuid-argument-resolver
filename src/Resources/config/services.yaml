@@ -11,5 +11,5 @@ services:
     tags:
       - { name: controller.argument_value_resolver, priority: 150 }
     arguments:
-      $httpFoundationFactory: 'Symfony\Bridge\PsrHttpMessage\HttpFoundationFactory'
+      $httpFoundationFactory: 'Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory'
       $invalidUuidResponse: '@alexlisenkov.uuid_argument_resolver_bundle.uuid_invalid_response'
