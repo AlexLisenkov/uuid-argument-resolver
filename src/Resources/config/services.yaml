@@ -7,9 +7,11 @@ services:
     class: '@Psr\Http\Message\ResponseInterface'
     factory: [ 'AlexLisenkov\UuidArgumentResolverBundle\InvalidUuidResponseFactory', create ]
 
+  Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory: ~
+
   AlexLisenkov\UuidArgumentResolverBundle\Resolver:
     tags:
       - { name: controller.argument_value_resolver, priority: 150 }
     arguments:
-      $httpFoundationFactory: 'Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory'
+      $httpFoundationFactory: '@Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory'
       $invalidUuidResponse: '@alexlisenkov.uuid_argument_resolver_bundle.uuid_invalid_response'

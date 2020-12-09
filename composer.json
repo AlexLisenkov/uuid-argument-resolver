@@ -1,7 +1,7 @@
 {
     "name": "alexlisenkov/uuid-argument-resolver-bundle",
     "description": "ramsey/uuid argument resolver bundle for Symfony",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "symfony-bundle",
     "require": {
         "php": "^7.3 || ^8.0",
